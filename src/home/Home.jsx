@@ -7,7 +7,7 @@ import silver from "../images/card/silver.jpg";
 import gold from "../images/card/gold.jpg";
 import platinum from "../images/card/platinum.jpg";
 import "./Home.css";
-import Footer from "../footer/Footer";
+
 
 
 function Home() {
@@ -39,7 +39,7 @@ function Home() {
             />
             </div>
             <Price />
-             <Footer /> 
+             {/* <Footer />  */}
         </div>
     )
 }

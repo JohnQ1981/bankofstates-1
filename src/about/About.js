@@ -11,7 +11,7 @@ function About() {
                 <div className="row">
                     <div className="col-lg-5 col-md-8 align-self-center">
                           <div className="about-us-wrap">
-                          <img className="thumb" src={about} alt="img" />
+                          <img className="thumb rounded" src={about} alt="img" />
                           </div>
                      </div>
                     <div className="col-lg-6 offset-lg-1">
