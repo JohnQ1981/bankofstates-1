@@ -1,54 +1,45 @@
-import React from 'react';
-
+import * as React from "react";
 import { Formik, Form, Field } from "formik";
 import { Button, LinearProgress } from "@material-ui/core";
 import { TextField } from "formik-material-ui";
+import service from "../service/bankService";
+import { ToastContainer, toast } from "react-toastify";
+import { useStateValue } from "../StateProvider";
+import { useHistory } from "react-router";
+import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
 import "./Login.css";
 
 const LoginSchema = Yup.object().shape({
-email: Yup.string().email("Invalid email-Please check again").required("Email is Required"),
-password: Yup.string().required("At Least 8 Char Required"),
+  password: Yup.string().required("Required"),
+  username: Yup.string().required("Required"),
 });
 
-const LoginForm = (props)=>{
-    return <div className="container">
-     <fieldset>
-
-         <legend>
-             Login
-         </legend>
-         <Form>
-             <div className="row justify-content-start">
-                 <div className="col-lg-2 text-center p-3">
-                     <Field component ={TextField}
-                         name="email"
-                         type="email"
-                         label = "Email"
-                     />
-                       {/* {props.errors.email && props.touched.email ? (
-              <div>{props.errors.email}</div>
-            ) : null} */}
-                     
-                 </div>
-                 <div className="col-lg-2 text-center p-3">
+const LoginForm = (props) => (
+  <div className="container">
+    <fieldset>
+      <legend>Login</legend>
+      <Form>
+        <div className="row justify-content-start">
+          <div className="col-lg-2 text-center p-3">
+            <Field
+              component={TextField}
+              name="username"
+              type="text"
+              label="User Name"
+            />
+          </div>
+          <div className="col-lg-2 text-center p-3">
             <Field
               component={TextField}
               type="password"
               label="Password"
               name="password"
             />
-            {/* {props.errors.password && props.touched.password ? (
-              <div>{props.errors.password}</div>
-            ) : null} */}
             {props.isSubmitting && <LinearProgress />}
           </div>
-         
-
-          
-
-             </div>
-             <div className="row justify-content-start">
+        </div>
+        <div className="row justify-content-start">
           <div className="col-lg-4 text-center p-3">
             <Button
               variant="contained"
@@ -61,38 +52,56 @@ const LoginForm = (props)=>{
             </Button>
           </div>
         </div>
-         </Form>
-
-     </fieldset>
-    </div>
-};
-
-
-// const LoginSchema = Yup.object().shape({
-//     password: Yup.string().required("Required"),
-//     email: Yup.string().email("Invalid email").required("Required"),
-//   });
-
-
+      </Form>
+    </fieldset>
+  </div>
+);
 const Login = () => {
-    return (
-        <Formik
-      initialValues={{
-        email: "",
-        password: "",
-      }}
-      validationSchema={LoginSchema}
-      onSubmit={(values, actions) => {
-        setTimeout(() => {
+  const history = useHistory();
+  const [{ userInfo }, dispatch] = useStateValue();
+  return (
+    <div>
+      <Formik
+        initialValues={{
+          username: "",
+          password: "",
+        }}
+        validationSchema={LoginSchema}
+        onSubmit={(values, actions) => {
+          service.login(values).then((response) => {
+            if (response.status === 200) {
+              const userInfo = response.data;
+              localStorage.setItem(
+                "auth",
+                JSON.stringify({
+                  token: userInfo.jwt,
+                })
+              );
+              dispatch({
+                type: "LOGIN",
+                item: userInfo,
+              });
+              if (userInfo?.user?.isAdmin) {//userInfo!=null$$ userInfo.user !=null
+              
+                history.push("/admin");
+              } else {
+                history.push("/user");
+              }
+              toast.success("Login Successful", {
+                position: toast.POSITION.TOP_CENTER,
+              });
+              // service.balance().then((response) => {
+              //   console.log("Balance is ", response.data);
+              // });
+              actions.resetForm();
+            }
+          });
           actions.setSubmitting(false);
-          alert(JSON.stringify(values));
-        }, 500);
-      }}
-      
-      component={LoginForm}
-    ></Formik>
-    );
+        }}
+        component={LoginForm}
+      ></Formik>
+      <ToastContainer />
+    </div>
+  );
 };
-
 export default Login;
-

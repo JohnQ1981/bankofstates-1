@@ -14,7 +14,8 @@ function App() {
         <Header />
         <Switch>
          <Route path="/login" ><Login /></Route>
-         <Route path="/register"><Register1 /></Route>
+         <Route path="/register"><Register /></Route>
+         <Route path="/register1"><Register1 /></Route>
          <Route path="/" component={Home}></Route>
         </Switch>
         <Footer />
