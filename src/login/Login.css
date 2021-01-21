@@ -24,3 +24,7 @@ button:hover {
   fieldset > legend {
     float: left;
   }
+  .lin{
+    height: 400px;
+    width: 600px;
+  }

@@ -9,6 +9,7 @@ import { useHistory } from "react-router";
 import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
 import "./Login.css";
+import lin from "../images/lin.jpg"
 
 const LoginSchema = Yup.object().shape({
   password: Yup.string().required("Required"),
@@ -17,7 +18,7 @@ const LoginSchema = Yup.object().shape({
 
 const LoginForm = (props) => (
   <div className="container">
-    <fieldset>
+    <fieldset><div className="row justify-content-center"><img className="lin" src={lin} ></img></div>
       <legend>Login</legend>
       <Form>
         <div className="row justify-content-start">
