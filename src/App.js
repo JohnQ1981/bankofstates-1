@@ -6,6 +6,7 @@ import Login from "./login/Login";
 import Footer from "./footer/Footer";
 import Register from "./register/Register";
 import Register1 from "./register/Register1";
+import Contact from "./contact/Contact"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
          <Route path="/login" ><Login /></Route>
          <Route path="/register"><Register /></Route>
          <Route path="/register1"><Register1 /></Route>
+         <Route path="/contact"><Contact /></Route>
          <Route path="/" component={Home}></Route>
         </Switch>
         <Footer />
