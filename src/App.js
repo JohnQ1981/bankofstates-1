@@ -9,6 +9,7 @@ import Register1 from "./register/Register1";
 import Contact from "./contact/Contact";
 import Admin from "./admin/Admin";
 import User from "./user/User";
+import Logout from "./logout/Logout";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Header />
         <Switch>
          <Route path="/login" ><Login /></Route>
+         <Route path="/logout" ><Logout /></Route>
          <Route path="/register"><Register /></Route>
          <Route path="/register1"><Register1 /></Route>
          <Route path="/contact"><Contact /></Route>
