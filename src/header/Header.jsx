@@ -8,11 +8,12 @@ import "./Header.css";
 import { useStateValue } from "../StateProvider";
 import UserMenu from "../menus/UserMenu";
 import AdminMenu from "../menus/AminMenu";
+import { Button } from "@material-ui/core";
 
 
 
 
-function Header() {
+function Header(props) {
   const [{ cart, userInfo }, dispatch] = useStateValue();
   return (
     <div>
@@ -62,12 +63,20 @@ function Header() {
                 {userInfo.user.firstName} {userInfo.user.lastName}
               </span>
             </div>
-            <Link to="/" className="header__link">
+            <Link to="/logout2" className="header__link">
               <div className="header__option">
                 <span className="header__lineOne">
                   <ExitToApp />
                 </span>
-                <span className="header__lineOne">Logout</span>
+                {/* <Button
+            variant="contained"
+              color="primary"
+              disabled={props.isSubmitting}
+              onClick={props.submitForm}
+              className="logout__btn">
+                LogOut
+            </Button> */}
+                <span className="header__lineOne">Logout</span> 
               </div>
             </Link>
           </div>

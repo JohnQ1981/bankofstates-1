@@ -23,7 +23,7 @@ function Footer() {
                   <ul className="widget-list">
                     <li>112, West road, F1 456 Tram Town.</li>
                     <li>Office No 2312</li>
-                    <li>info@bankofstates.com</li>
+                    <li>info@johnbankofstates.com</li>
                     <li>234-3434567</li>
                   </ul>
                 </div>

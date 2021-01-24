@@ -57,7 +57,7 @@ const LoginForm = (props) => (
     </fieldset>
   </div>
 );
-const Login = () => {
+const Logout = () => {
   const history = useHistory();
   const [{ userInfo }, dispatch] = useStateValue();
   return (
@@ -84,11 +84,11 @@ const Login = () => {
               });
               if (userInfo?.user?.isAdmin) {//userInfo!=null$$ userInfo.user !=null
               
-                history.push("/admin");
+                history.push("/logout");
               } else {
-                history.push("/user");
+                history.push("/logout");
               }
-              toast.success("Login Successful", {
+              toast.success("Logout Successful", {
                 position: toast.POSITION.TOP_CENTER,
               });
               // service.balance().then((response) => {
@@ -105,4 +105,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default Logout;

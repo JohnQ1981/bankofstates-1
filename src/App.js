@@ -10,6 +10,8 @@ import Contact from "./contact/Contact";
 import Admin from "./admin/Admin";
 import User from "./user/User";
 import Logout from "./logout/Logout";
+import Logout1 from "./logout/Logout1";
+import Logout2 from "./logout/Logout2";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Switch>
          <Route path="/login" ><Login /></Route>
          <Route path="/logout" ><Logout /></Route>
+         <Route path="/logout2" ><Logout2 /></Route>
          <Route path="/register"><Register /></Route>
          <Route path="/register1"><Register1 /></Route>
          <Route path="/contact"><Contact /></Route>
