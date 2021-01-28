@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
 import "./Contact.css";
 import cus from "../images/cus.jpg";
+import * as emailjs from 'emailjs-com';
 
 toast.configure();
 const RegisterSchema = Yup.object().shape({
@@ -26,7 +27,7 @@ const RegisterSchema = Yup.object().shape({
 
 const RegistrationForm = (props) => (
   <div className="container">
-    <fieldset><div className="row justify-content-center"><img  src={cus}></img></div>
+    <fieldset><div className="row justify-content-center"><img className="cus" src={cus}></img></div>
       <legend>Contact Us</legend>
       <Form>
         <div className="row justify-content-start">

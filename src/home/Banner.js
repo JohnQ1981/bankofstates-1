@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import banner1 from "../images/banner1.png";
 import banner2 from "../images/banner2.png";
 import banner3 from "../images/banner3.png";
+import banner4 from "../images/banner4.jpg";
 import { Carousel, CarouselItem, CarouselControl } from "reactstrap";
 
 const items = [
@@ -13,6 +14,9 @@ const items = [
     },
     {
       src: banner3,
+    },
+    {
+      src: banner4,
     },
   ];
 

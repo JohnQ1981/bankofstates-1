@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.4.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "emailjs-com": "^2.6.4",
     "formik": "^2.2.6",
     "formik-material-ui": "^3.0.1",
     "plotly.js": "^1.58.4",
@@ -21,7 +22,7 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.1",
     "react-toastify": "^6.2.0",
-    "reactstrap": "^8.7.1",
+    "reactstrap": "^8.9.0",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4",
     "yup": "^0.32.8"
