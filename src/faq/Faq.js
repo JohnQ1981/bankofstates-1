@@ -2,19 +2,39 @@ import React from 'react';
 import faq1 from '../images/faq.jpg';
 import faq2 from '../images/faq2.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col,Navbar} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/Navbar';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Faq = () => {
     return (
         <div className="about-us-area pdt-50">
         <div>
         <Container>
-  <Navbar  expand="lg" variant="light" bg="light">
+  <Navbar sticky="top" expand="lg" variant="light" bg="warning">
     <Navbar.Brand href="/home">HomePage</Navbar.Brand>
     <Navbar.Brand href="/about">About</Navbar.Brand>
     <Navbar.Brand href="/login">Login</Navbar.Brand>
   </Navbar>
 </Container>
+
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+<Navbar.Brand href="/home">Home</Navbar.Brand>
+<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+<Navbar.Collapse id="responsive-navbar-nav">
+
+<Navbar.Brand href="/contact">Contact Us</Navbar.Brand>
+</Navbar.Collapse>
+
+
+
+  </Navbar>
+ 
+ 
+
         </div>
         <div className="row justify-content-center"><img src={faq2} alt="img" ></img></div>
                
