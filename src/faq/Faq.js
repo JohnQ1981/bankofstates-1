@@ -4,8 +4,7 @@ import faq2 from '../images/faq2.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col} from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/Navbar';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 

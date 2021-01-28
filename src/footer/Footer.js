@@ -6,7 +6,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PinterestIcon from "@material-ui/icons/Pinterest";
-import Faq from '../faq/Faq';
+
 function Footer() {
     const yr = new Date().getFullYear();
   return (
