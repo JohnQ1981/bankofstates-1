@@ -10,7 +10,9 @@ import Contact from "./contact/Contact";
 import Admin from "./admin/Admin";
 import User from "./user/User";
 import Logout from "./logout/Logout";
-import Logout1 from "./logout/Logout1";
+import Faq from'./faq/Faq';
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import Logout1 from "./logout/Logout1";
 import Logout2 from "./logout/Logout2";
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+        <Route path="/faq" ><Faq /></Route>
          <Route path="/login" ><Login /></Route>
          <Route path="/logout" ><Logout /></Route>
          <Route path="/logout2" ><Logout2 /></Route>

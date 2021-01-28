@@ -7,6 +7,7 @@ import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 ReactDOM.render(
   <React.Fragment>
      <StateProvider initialState={initialState} reducer={reducer}>

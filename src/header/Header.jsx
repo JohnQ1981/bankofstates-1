@@ -8,13 +8,13 @@ import "./Header.css";
 import { useStateValue } from "../StateProvider";
 import UserMenu from "../menus/UserMenu";
 import AdminMenu from "../menus/AminMenu";
-import { Button } from "@material-ui/core";
+//import { Button } from "@material-ui/core";
 
 
 
 
 function Header(props) {
-  const [{ cart, userInfo }, dispatch] = useStateValue();
+  const [{ cart, userInfo }] = useStateValue();
   return (
     <div>
       <nav className="header">

@@ -6,6 +6,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PinterestIcon from "@material-ui/icons/Pinterest";
+import Faq from '../faq/Faq';
 function Footer() {
     const yr = new Date().getFullYear();
   return (
@@ -33,7 +34,7 @@ function Footer() {
                   <div className="widget-title">Links</div>
                   <ul className="widget-list">
                     <li>
-                      <Link to={"/services"}>FAQs</Link>
+                      <Link to={"/faq"}>FAQs</Link>
                     </li>
                     <li>
                       <Link to={"/about"}>About Us</Link>
@@ -61,10 +62,10 @@ function Footer() {
                       <Link to={"/contact"}>Contact Us</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>Sign in</Link>
+                      <Link to={"/login"}>Sign in</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>My Account</Link>
+                      <Link to={"/login"}>My Account</Link>
                     </li>
                   </ul>
                 </div>
