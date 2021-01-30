@@ -79,7 +79,7 @@ const SendMoney = () => {
           <AccountInfo />
           <div>
           
-            <Formik
+            {/* <Formik
               initialValues={{
                 amount: "",
                 comment: "",
@@ -102,12 +102,12 @@ const SendMoney = () => {
                 actions.setSubmitting(false);
               }}
               component={DepositForm}
-            ></Formik>
+            ></Formik> */}
             <ToastContainer />
           </div>
           <Divider />
-          <h1 className={classes.infoText}>Transactions</h1>
-          <Transactions />
+          {/* <h1 className={classes.infoText}>Transactions</h1>
+          <Transactions /> */}
           <h1 className={classes.infoText}>Send Money</h1>
           <Sm />
         </div>

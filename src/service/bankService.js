@@ -10,11 +10,11 @@ class BankService {
   register(userInfo) {
     return axios.post(BASE_URL + "/auth/register", userInfo);
   }
-  deposit(userInfo) {
-    return axiosInstance.post(BASE_URL + "/account/deposit", userInfo);
+  deposit(transactionInfo) {
+    return axiosInstance.post(BASE_URL + "/account/deposit", transactionInfo);
   }
-  withdraw(userInfo) {
-    return axiosInstance.post(BASE_URL + "/account/withdraw", userInfo);
+  withdraw(transactionInfo) {
+    return axiosInstance.post(BASE_URL + "/account/withdraw", transactionInfo);
   }
   // balance() {
   //   return axiosInstance.get(BASE_URL + "/account/balance");

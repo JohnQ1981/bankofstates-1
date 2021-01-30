@@ -28,8 +28,8 @@ const AccountInfo = () => {
               </CardIcon>
               <p className={classes.cardCategory}>Account Number</p>
               <h3 className={classes.cardTitle}>
-              MyJohnAcocuntNumber
-                {/* {userInfo.user.accountNumber} */}
+              notcomingfromjava
+                {userInfo.user.accountNumber}
               </h3>
             </CardHeader>
           </Card>
@@ -42,8 +42,8 @@ const AccountInfo = () => {
               </CardIcon>
               <p className={classes.cardCategory}>Balance</p>
               <h3 className={classes.cardTitle}>
-              $125000
-                {/* $ {userInfo.user.accountBalance} */}
+              
+                $ 20000{userInfo.user.accountBalance}
               </h3>
             </CardHeader>
           </Card>
