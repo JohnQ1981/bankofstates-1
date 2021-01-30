@@ -14,6 +14,10 @@ import Faq from'./faq/Faq';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import Logout1 from "./logout/Logout1";
 import Logout2 from "./logout/Logout2";
+import Deposit from './deposit/Deposit';
+import Transactions from './account/Transactions';
+import SendMoney from './sendmoney/SendMoney';
+import PayPal from './paypal/PayPal';
 
 
 function App() {
@@ -22,6 +26,10 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+        <Route path="/deposit" ><Deposit /></Route> 
+        <Route path="/paypal" ><PayPal /></Route>
+        <Route path="/transactions" ><Transactions /></Route>
+        <Route path="/sendmoney" ><SendMoney /></Route> 
         <Route path="/faq" ><Faq /></Route>      
          <Route path="/login" ><Login /></Route>
          <Route path="/logout" ><Logout /></Route>

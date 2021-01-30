@@ -31,7 +31,7 @@ const UserMenu = () => {
     setAnchorEl(null);
   };
   const handleTransaction = () => {
-    history.push("/transaction");
+    history.push("/transactions");
     setAnchorEl(null);
   };
 
