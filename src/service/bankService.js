@@ -1,6 +1,5 @@
 import axios from "axios";
 import axiosInstance from "./axiosInstance";
-
 const BASE_URL = "http://localhost:8081";
 
 class BankService {
@@ -16,8 +15,5 @@ class BankService {
   withdraw(transactionInfo) {
     return axiosInstance.post(BASE_URL + "/account/withdraw", transactionInfo);
   }
-  // balance() {
-  //   return axiosInstance.get(BASE_URL + "/account/balance");
-  // }
 }
 export default new BankService();

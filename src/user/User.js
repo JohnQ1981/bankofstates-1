@@ -10,7 +10,6 @@ import DateRange from "@material-ui/icons/DateRange";
 import Update from "@material-ui/icons/Update";
 import Accessibility from "@material-ui/icons/Accessibility";
 import CardBody from "../components/Card/CardBody.js";
-
 import GridItem from "../components/Grid/GridItem.js";
 import GridContainer from "../components/Grid/GridContainer.js";
 import Card from "../components/Card/Card.js";
@@ -176,5 +175,4 @@ const User = () => {
     </div>
   );
 };
-
 export default User;
