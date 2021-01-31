@@ -1,6 +1,6 @@
 import React from "react";
 import { useStateValue } from "../StateProvider";
-import { useHistory } from "react-router";
+//import { useHistory } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
@@ -28,7 +28,6 @@ const AccountInfo = () => {
               </CardIcon>
               <p className={classes.cardCategory}>Account Number</p>
               <h3 className={classes.cardTitle}>
-              notcomingfromjava
                 {userInfo.user.accountNumber}
               </h3>
             </CardHeader>
@@ -42,8 +41,7 @@ const AccountInfo = () => {
               </CardIcon>
               <p className={classes.cardCategory}>Balance</p>
               <h3 className={classes.cardTitle}>
-              
-                $ 20000{userInfo.user.accountBalance}
+                $ {userInfo.user.accountBalance}
               </h3>
             </CardHeader>
           </Card>
