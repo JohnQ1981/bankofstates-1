@@ -74,7 +74,7 @@ const Deposit = () => {
       {!userInfo && history.push("/login")}
       {userInfo && userInfo.user && (
         <div>
-          <AccountInfo />
+          <fieldset><AccountInfo /></fieldset>
           <div>
             <Formik
               initialValues={{
