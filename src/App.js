@@ -18,6 +18,7 @@ import Deposit from './deposit/Deposit';
 import Transactions from './account/Transactions';
 import SendMoney from './sendmoney/SendMoney';
 import PayPal from './paypal/PayPal';
+import Withdrawal from './withdrawal/Withdrawal';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+        <Route path="/withdrawal" ><Withdrawal /></Route>
         <Route path="/deposit" ><Deposit /></Route> 
         <Route path="/paypal" ><PayPal /></Route>
         <Route path="/transactions" ><Transactions /></Route>
